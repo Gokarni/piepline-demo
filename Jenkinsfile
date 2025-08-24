@@ -8,17 +8,22 @@ pipeline{
         }
         stage('Test'){
             steps{
-                echo 'Testing..'
+                echo 'Pipeline Testing'
+            }
+        }
+        stage('Deploy'){
+            steps{
+                echo 'Deploying....'
             }
         }
         post{
-        success{
-            echo 'Pipeline completed successfully!'
+            success{
+                echo 'Pipeline executed successfully!'
+            }
+            failure{
+                echo 'Pipeline failed. Please check the logs.'
+            }
         }
-        failure{
-            echo 'Pipeline failed. Please check the logs.'
-        }
-        
     }
 }
-}
+
