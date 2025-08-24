@@ -11,6 +11,7 @@ pipeline{
                 echo 'Testing..'
             }
         }
+        post{
         success{
             echo 'Pipeline completed successfully!'
         }
@@ -19,4 +20,5 @@ pipeline{
         }
         
     }
+}
 }
