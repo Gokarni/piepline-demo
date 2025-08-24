@@ -16,14 +16,14 @@ pipeline{
                 echo 'Deploying....'
             }
         }
-        post{
-            success{
-                echo 'Pipeline executed successfully!'
-            }
-            failure{
-                echo 'Pipeline failed. Please check the logs.'
-            }
+              
+    }
+    post{
+        success{
+            echo 'Pipeline executed successfully!'
+        }
+        failure{
+            echo 'Pipeline failed. Please check the logs.'
         }
     }
 }
-
